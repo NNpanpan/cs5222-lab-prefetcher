@@ -1,0 +1,46 @@
+
+*** Data Prefetching Championship 2 Simulator ***
+
+Warmup Instructions: 10000000
+Simulation Instructions: 100000000
+Scramble loads OFF
+Using 1MB Last Level Cache
+Using 12.8 GB/s DRAM bandwidth
+Empty buffer
+Instructions Retired: 100000 Cycle: 48199 Hearbeat IPC: 2.074732 Cumulative IPC: 2.074732
+Instructions Retired: 200000 Cycle: 85818 Hearbeat IPC: 2.658231 Cumulative IPC: 2.330513
+Instructions Retired: 300001 Cycle: 121869 Hearbeat IPC: 2.773876 Cumulative IPC: 2.461668
+Instructions Retired: 400004 Cycle: 145560 Hearbeat IPC: 4.221139 Cumulative IPC: 2.748035
+Instructions Retired: 500005 Cycle: 162741 Hearbeat IPC: 5.820441 Cumulative IPC: 3.072397
+Instructions Retired: 600000 Cycle: 184300 Hearbeat IPC: 4.638202 Cumulative IPC: 3.255562
+Instructions Retired: 700003 Cycle: 220333 Hearbeat IPC: 2.775317 Cumulative IPC: 3.177023
+Instructions Retired: 800005 Cycle: 247479 Hearbeat IPC: 3.683858 Cumulative IPC: 3.232618
+Instructions Retired: 900000 Cycle: 279987 Hearbeat IPC: 3.076012 Cumulative IPC: 3.214435
+Instructions Retired: 1000000 Cycle: 316637 Hearbeat IPC: 2.728513 Cumulative IPC: 3.158191
+Instructions Retired: 1100000 Cycle: 362737 Hearbeat IPC: 2.169197 Cumulative IPC: 3.032500
+Instructions Retired: 1200001 Cycle: 405944 Hearbeat IPC: 2.314463 Cumulative IPC: 2.956075
+Instructions Retired: 1300000 Cycle: 441998 Hearbeat IPC: 2.773590 Cumulative IPC: 2.941190
+Instructions Retired: 1400001 Cycle: 468164 Hearbeat IPC: 3.821792 Cumulative IPC: 2.990407
+Instructions Retired: 1500001 Cycle: 501779 Hearbeat IPC: 2.974862 Cumulative IPC: 2.989366
+Instructions Retired: 1600004 Cycle: 535744 Hearbeat IPC: 2.944296 Cumulative IPC: 2.986508
+Instructions Retired: 1700000 Cycle: 552937 Hearbeat IPC: 5.816088 Cumulative IPC: 3.074491
+Instructions Retired: 1800001 Cycle: 570119 Hearbeat IPC: 5.820102 Cumulative IPC: 3.157237
+Instructions Retired: 1900003 Cycle: 600323 Hearbeat IPC: 3.310886 Cumulative IPC: 3.164968
+Instructions Retired: 2000000 Cycle: 636375 Hearbeat IPC: 2.773688 Cumulative IPC: 3.142801
+Instructions Retired: 2100001 Cycle: 659970 Hearbeat IPC: 4.238228 Cumulative IPC: 3.181964
+Instructions Retired: 2200003 Cycle: 696037 Hearbeat IPC: 2.772673 Cumulative IPC: 3.160756
+Instructions Retired: 2300005 Cycle: 737174 Hearbeat IPC: 2.430950 Cumulative IPC: 3.120030
+Instructions Retired: 2400000 Cycle: 783294 Hearbeat IPC: 2.168148 Cumulative IPC: 3.063984
+Instructions Retired: 2500000 Cycle: 821886 Hearbeat IPC: 2.591211 Cumulative IPC: 3.041784
+Instructions Retired: 2600005 Cycle: 857941 Hearbeat IPC: 2.773679 Cumulative IPC: 3.030517
+Instructions Retired: 2700000 Cycle: 881666 Hearbeat IPC: 4.214752 Cumulative IPC: 3.062384
+Instructions Retired: 2800003 Cycle: 917684 Hearbeat IPC: 2.776473 Cumulative IPC: 3.051162
+Instructions Retired: 2900000 Cycle: 942972 Hearbeat IPC: 3.954326 Cumulative IPC: 3.075383
+Instructions Retired: 3000003 Cycle: 960109 Hearbeat IPC: 5.835502 Cumulative IPC: 3.124648
+
+Simulation complete. Instructions retired: 3099757 Cycles elapsed: 980019 IPC: 3.162956
+
+Prefetcher final stats
+--Prefetched 0 times during warmup
+--Prefetched 12502 times in total
+
