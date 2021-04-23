@@ -40,7 +40,9 @@ Instructions Retired: 3000003 Cycle: 10441494 Hearbeat IPC: 0.491949 Cumulative 
 
 Simulation complete. Instructions retired: 3099757 Cycles elapsed: 10638936 IPC: 0.291360
 
+
 Prefetcher final stats
---Prefetched 0 times during warmup
---Prefetched 4009 times in total
+--Prefetched attempts in total: 4009
+--Prefetched lines:             9916
+--Prefetched successful:        1488
 

@@ -16,13 +16,15 @@
 
 typedef long long int ulli;
 
-int TBL_ENTRIES = 4096;
+int TBL_ENTRIES = 512;
 int PREFETCH_DEGREE = 4;
 
 GlobalHistoryBuffer global_history_bf;
 IndexTable index_tbl;
 ulli pf_cnt = 0;
 ulli pf_warm = 0;
+ulli lines_fetch = 0;
+ulli successful_fetch = 0;
 ulli counter = 0;
 
 void l2_prefetcher_initialize(int cpu_num)
@@ -64,7 +66,11 @@ void l2_prefetcher_operate(int cpu_num, unsigned long long int addr, unsigned lo
   for (ulli& a : to_pf)
   {
     // std::cout << a << " ";
-    l2_prefetch_line(cpu_num, addr, a, FILL_L2);
+    lines_fetch++;
+    if (l2_prefetch_line(cpu_num, addr, a, FILL_L2))
+    {
+      successful_fetch++;
+    }
   }
   // std::cout << std::endl;
 }
@@ -82,14 +88,15 @@ void l2_prefetcher_heartbeat_stats(int cpu_num)
 
 void l2_prefetcher_warmup_stats(int cpu_num)
 {
-  printf("Prefetcher warmup complete stats\n");
-  printf("--Prefetched %lld times during warmup\n\n", pf_cnt);
-  pf_warm = pf_cnt;
+  // printf("Prefetcher warmup complete stats\n");
+  // printf("--Prefetched %lld times during warmup\n\n", pf_cnt);
+  // pf_warm = pf_cnt;
 }
 
 void l2_prefetcher_final_stats(int cpu_num)
 {
-  printf("Prefetcher final stats\n");
-  printf("--Prefetched %lld times during warmup\n", pf_warm);
-  printf("--Prefetched %lld times in total\n\n", pf_cnt);
+  printf("\nPrefetcher final stats\n");
+  printf("--Prefetched attempts in total: %lld\n", pf_cnt);
+  printf("--Prefetched lines:             %lld\n", lines_fetch);
+  printf("--Prefetched successful:        %lld\n\n", successful_fetch);
 }
