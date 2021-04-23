@@ -16,7 +16,7 @@
 
 typedef long long int ulli;
 
-int TBL_ENTRIES = 512;
+int TBL_ENTRIES = 8192;
 int PREFETCH_DEGREE = 4;
 
 GlobalHistoryBuffer global_history_bf;
@@ -43,6 +43,11 @@ void l2_prefetcher_operate(int cpu_num, unsigned long long int addr, unsigned lo
   //printf("(0x%llx 0x%llx %d %d %d) ", addr, ip, cache_hit, get_l2_read_queue_occupancy(0), get_l2_mshr_occupancy(0));
 
   counter++;
+
+  if (cache_hit)
+  {
+    return;
+  }
 
   // Add entry to GHB
   GHBEntry* ghb_ptr = index_tbl.get_ghb_ptr(addr);
@@ -98,5 +103,5 @@ void l2_prefetcher_final_stats(int cpu_num)
   printf("\nPrefetcher final stats\n");
   printf("--Prefetched attempts in total: %lld\n", pf_cnt);
   printf("--Prefetched lines:             %lld\n", lines_fetch);
-  printf("--Prefetched successful:        %lld\n\n", successful_fetch);
+  printf("--Prefetched successful:        %lld\n", successful_fetch);
 }
